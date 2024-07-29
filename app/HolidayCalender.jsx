@@ -115,8 +115,8 @@ const styles = StyleSheet.create({
     dropdownContainer: {
         paddingVertical: 16,
         paddingHorizontal: 20,
-        marginRight: "50%",
-        margin: "2%",
+        marginRight: "35%",
+        // margin: "2%",
     },
     dropdown: {
         height: 40,

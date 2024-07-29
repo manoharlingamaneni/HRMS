@@ -1,12 +1,12 @@
-import { StyleSheet, Text, TouchableOpacity, View, fieldset, legend, ScrollView } from 'react-native'
-import React, { useState } from 'react'
-import { CheckBox } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View, ScrollView, legend, fieldset} from 'react-native';
+import React, { useState } from 'react';
+import CheckBox from 'react-native-check-box';
 import { AntDesign, EvilIcons } from '@expo/vector-icons';
+import FieldSet from 'react-native-fieldset';
 
-export default function HistoryLeaves() {
 
+export default function LeavesHistory() {
     const [expandedCards, setExpandedCards] = useState(false);
-
     const [casualLeave, setCasualLeave] = useState(false);
     const [sickLeave, setSickLeave] = useState(false);
     const [specialLeave, setSpecialLeave] = useState(false);
@@ -24,10 +24,10 @@ export default function HistoryLeaves() {
         <View style={styles.container}>
             <View style={styles.profileContainer}>
                 <View style={{ flexDirection: "row" }}>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate("leaves")}>
                         <AntDesign name="left" size={24} color="#fff" />
                     </TouchableOpacity>
-                    <Text style={{ color: "#fff", fontSize: 18, paddingLeft: 5, fontWeight: 400 }}> Leaves History</Text>
+                    <Text style={{ color: "#fff", fontSize: 18, paddingLeft: 5, fontWeight: 400 }}>Leaves History</Text>
                 </View>
                 <TouchableOpacity>
                     <EvilIcons name="bell" size={28} color="#fff" />
@@ -55,7 +55,6 @@ export default function HistoryLeaves() {
                             style={styles.checkBox}
                         />
                         <Text style={styles.leaveOptionText}>Special Leave</Text>
-
                     </View>
                 </View>
 
@@ -65,7 +64,6 @@ export default function HistoryLeaves() {
                             value={comfortLeave}
                             onValueChange={setComfortLeave}
                             style={styles.checkBox}
-
                         />
                         <Text style={styles.leaveOptionText}>Comfort Leave</Text>
                         <CheckBox
@@ -77,8 +75,8 @@ export default function HistoryLeaves() {
                     </View>
                 </View>
 
-                <fieldset style={styles.leaveDetails}>
-                    <legend style={styles.legend}>Approved</legend>
+                <FieldSet style={styles.leaveDetails}>
+                    <Text style={styles.legend}> Approved </Text>
                     <View>
                         <View style={styles.leaveHeader}>
                             <Text style={{ fontSize: 18, fontWeight: 400, }}>Leave</Text>
@@ -100,10 +98,10 @@ export default function HistoryLeaves() {
                             </View>
                         )}
                     </View>
-                </fieldset>
+                </FieldSet>
 
-                <fieldset style={styles.leaveDetails1}>
-                    <legend style={styles.legend1}>WithDrawn</legend>
+                <FieldSet style={styles.leaveDetails1}>
+                    <Text style={styles.legend1}> WithDrawn </Text>
                     <View style={styles.leaveHeader}>
                         <Text style={{ fontSize: 18, fontWeight: 400, }}>Leave</Text>
                         <TouchableOpacity style={styles.cardHeader} onPress={() => toggleCard(2)}>
@@ -145,7 +143,7 @@ export default function HistoryLeaves() {
                             </View>
                         </View>
                     )}
-                </fieldset>
+                </FieldSet>
             </ScrollView>
         </View>
     )
@@ -165,11 +163,9 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-between',
         paddingHorizontal: 10,
-
     },
     headerText: {
         fontSize: 24,
-
     },
     leaveOption: {
         flexDirection: 'row',
@@ -177,13 +173,11 @@ const styles = StyleSheet.create({
     },
     checkBox: {
         marginLeft: 10,
-        // paddingTop: 4,
         marginTop: 4,
     },
     checkboxContainer: {
         flexWrap: 'wrap',
         justifyContent: 'space-between',
-        // padding: 5,
         marginTop: 5,
     },
     row: {
@@ -202,11 +196,9 @@ const styles = StyleSheet.create({
         paddingLeft: 5,
         fontFamily: "Roboto",
         marginTop: 8,
-
     },
     leaveDetails: {
         backgroundColor: '#fff',
-        // padding: 20,
         borderRadius: 4,
         marginBottom: 20,
         borderWidth: 1,
@@ -216,7 +208,6 @@ const styles = StyleSheet.create({
     },
     leaveDetails1: {
         backgroundColor: '#fff',
-        // padding: 20,
         borderRadius: 4,
         marginBottom: 20,
         borderWidth: 1,
@@ -228,7 +219,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
-        marginTop: -5
+        marginTop: -5,
     },
     leaveHeaderText: {
         fontSize: 20,
@@ -246,7 +237,6 @@ const styles = StyleSheet.create({
     },
     leaveTypeName: {
         fontSize: 16,
-
     },
     leaveDates: {
         flexDirection: 'row',
@@ -260,15 +250,15 @@ const styles = StyleSheet.create({
     leaveDays: {
         fontSize: 16,
         color: '#ccc',
-        textAlign: "center"
+        textAlign: "center",
     },
     leaveDays1: {
         fontSize: 16,
         color: '#ccc',
-        textAlign: "center"
+        textAlign: "center",
     },
     dotedLine: {
-        marginTop: -10
+        marginTop: -10,
     },
     leaveInfo: {
         marginBottom: 10,
@@ -276,7 +266,7 @@ const styles = StyleSheet.create({
     leaveInfoText: {
         fontSize: 14,
         marginBottom: 5,
-        color: "#3D395C"
+        color: "#3D395C",
     },
     leaveInfoItem: {
         flexDirection: 'row',
@@ -294,7 +284,7 @@ const styles = StyleSheet.create({
         marginRight: "30%",
         alignItems: "flex-start",
         justifyContent: "flex-start",
-        direction: "row"
+        direction: "row",
     },
     legend: {
         flex: 1,
@@ -303,8 +293,8 @@ const styles = StyleSheet.create({
         color: '#FFFFFF',
         backgroundColor: "#04DA33",
         borderRadius: 70,
-        // padding: 5,
         marginLeft: "65%",
+        marginTop:-20
     },
     legend1: {
         flex: 1,
@@ -313,7 +303,7 @@ const styles = StyleSheet.create({
         color: '#FFFFFF',
         backgroundColor: "#F5AC03",
         borderRadius: 50,
-        // padding: 5,
         marginLeft: '60%',
+        marginTop:-20
     },
 });

@@ -12,6 +12,16 @@
     "**/*.ts",
     "**/*.tsx",
     ".expo/types/**/*.ts",
-    "expo-env.d.ts"
-, "app/ApplyLeave.jsx", "app/(tabs)/demo.jsx", "app/(tabs)/ex.jsx", "app/leavesDashboard.jsx", "app/PendingLeaves.jsx", "app/(tabs)/leaves.jsx", "app/leaveCalender.jsx", "app/HolidayCalender.jsx", "app/HistoryLeaves.jsx", "app/(tabs)/ex.jsx"  ]
+    "expo-env.d.ts",
+    "app/(tabs)/ApplyLeave.jsx",
+    "app/(tabs)/demo.jsx",
+    "app/(tabs)/ex.jsx",
+    "app/leavesDashboard.jsx",
+    "app/PendingLeaves.jsx",
+    "app/(tabs)/leaves.jsx",
+    "app/leaveCalender.jsx",
+    "app/HolidayCalender.jsx",
+    "app/(tabs)/HistoryLeaves.jsx",
+    "app/(tabs)/ex.jsx"
+  ]
 }

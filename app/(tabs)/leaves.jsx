@@ -37,15 +37,15 @@ export default function Leaves() {
           <View style={styles.summaryCard}>
             <Text style={styles.summaryTitle}>My Pending Leaves</Text>
             <Text style={styles.summaryValue}>04</Text>
-            <TouchableOpacity style={styles.summaryButton}>
-              <Text style={styles.summaryButtonText} onPress={() => navigation.navigate("PendingLeaves")}>View</Text>
+            <TouchableOpacity style={styles.summaryButton} onPress={() => navigation.navigate("PendingLeaves")}>
+              <Text style={styles.summaryButtonText}>View</Text>
             </TouchableOpacity>
           </View>
           <View style={styles.summaryCard1}>
             <Text style={styles.summaryTitle}>My History Leaves</Text>
             <Text style={styles.summaryValue}>10</Text>
             <TouchableOpacity style={styles.summaryButton}>
-              <Text style={styles.summaryButtonText} onPress={() => navigation.navigate("HistoryLeaves")}>View</Text>
+              <Text style={styles.summaryButtonText} onPress={() => navigation.navigate("LeavesHistory")}>View</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -397,7 +397,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#1e81b0",
     height: 45,
     alignItems: "center",
-    padding: 5
+    padding: 5,
+    // paddingTop: "5%",
   },
   headerLeft: {
     flexDirection: "row",

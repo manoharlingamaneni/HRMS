@@ -2,8 +2,11 @@ import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View, ScrollView } from "react-native";
 import { AntDesign, EvilIcons } from '@expo/vector-icons';
 import CalendarStrip from 'react-native-calendar-strip';
+import { useNavigation } from '@react-navigation/native';
 
 export default function LeaveCalendar() {
+  
+  const navigation = useNavigation();
 
   return (
 
@@ -96,7 +99,7 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontSize: 18,
     paddingLeft: 5,
-    fontWeight: 400
+    fontWeight: "400"
   },
   calendarContainer: {
     paddingTop: "4%",
@@ -145,7 +148,7 @@ const styles = StyleSheet.create({
     paddingTop: 15,
     color: "rgba(13, 7, 51, 1)",
     fontSize: 16,
-    fontWeight: 400
+    fontWeight: "400"
   },
   leaveSummaryHeader1: {
     flexDirection: "row",
@@ -154,7 +157,7 @@ const styles = StyleSheet.create({
     paddingTop: 8,
     color: "rgba(13, 7, 51, 1)",
     fontSize: 16,
-    fontWeight: 400
+    fontWeight: "400"
   },
   leaveDateRange: {
     flexDirection: "row",

@@ -7,7 +7,7 @@ import { VictoryGroup } from 'victory-group';
 import { VictoryBar } from 'victory-bar';
 import { VictoryLegend } from 'victory-legend';
 import { VictoryAxis } from 'victory-axis';
-import { NavigationProp, useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 import { Calendar } from 'react-native-calendars';
 
 export default function LeavesDashboard() {
@@ -38,93 +38,93 @@ export default function LeavesDashboard() {
         ],
     };
 
-    const LeavesChart = () => {
-        return (
-            <View style={styles.barGraph}>
-                <VictoryChart
-                    domainPadding={{ x: [20, 20], y: [20, 20] }}
-                    padding={{ top: 40, bottom: 50, left: 50, right: 30 }}
-                >
-                    <VictoryGroup offset={10} colorScale={["blue", "orange", "green", "red"]}>
-                        <VictoryBar
-                            data={data.casual}
-                            barWidth={10}
-                            cornerRadius={{ top: 5, bottom: 5 }}
-                            style={{
-                                data: {
-                                    fill: 'rgba(218, 4, 4, 1)',
-                                    stroke: '#000',
-                                    strokeWidth: 1
-                                }
-                            }}
-                        />
-                        <VictoryBar
-                            data={data.sick}
-                            barWidth={10}
-                            cornerRadius={{ top: 5, bottom: 5 }}
-                            style={{
-                                data: {
-                                    fill: 'rgba(214, 4, 218, 1)',
-                                    stroke: '#000',
-                                    strokeWidth: 1
-                                }
-                            }}
-                        />
-                        <VictoryBar
-                            data={data.comfort}
-                            barWidth={10}
-                            cornerRadius={{ top: 5, bottom: 5 }}
-                            style={{
-                                data: {
-                                    fill: 'rgba(255, 168, 0, 1)',
-                                    stroke: '#000',
-                                    strokeWidth: 1
-                                }
-                            }}
-                        />
-                        <VictoryBar
-                            data={data.special}
-                            barWidth={10}
-                            cornerRadius={{ top: 5, bottom: 5 }}
-                            style={{
-                                data: {
-                                    fill: 'rgba(9, 4, 255, 1)',
-                                    stroke: '#000',
-                                    strokeWidth: 1
-                                }
-                            }}
-                        />
-                    </VictoryGroup>
-                    <VictoryAxis
-                        dependentAxis
-                        style={{
-                            axis: { stroke: 'none' },
-                            grid: { stroke: 'grey', strokeDasharray: '4,4' },
-                            ticks: { padding: 10 },
-                            tickLabels: { fontSize: 10, padding: 5 }
-                        }}
-                    />
-                    <VictoryAxis
-                        style={{
-                            grid: { stroke: 'none' },
-                            tickLabels: { fontSize: 10 }
-                        }}
-                    />
-                    {/* <VictoryLegend
-                        style={{marginLeft: "10%"}}
-                        orientation="horizontal"
-                        gutter={30}
-                        data={[
-                            { name: 'Casual', symbol: { fill: 'rgba(218, 4, 4, 1)' } },
-                            { name: 'Sick', symbol: { fill: 'rgba(214, 4, 218, 1)' } },
-                            { name: 'Comfort', symbol: { fill: 'rgba(255, 168, 0, 1)' } },
-                            { name: 'Special', symbol: { fill: 'rgba(9, 4, 255, 1)' } },
-                        ]}
-                    /> */}
-                </VictoryChart>
-            </View>
-        );
-    };
+    // const LeavesChart = () => {
+    //     return (
+    //         <View style={styles.barGraph}>
+    //             <VictoryChart
+    //                 domainPadding={{ x: [20, 20], y: [20, 20] }}
+    //                 padding={{ top: 40, bottom: 50, left: 50, right: 30 }}
+    //             >
+    //                 <VictoryGroup offset={10} colorScale={["blue", "orange", "green", "red"]}>
+    //                     <VictoryBar
+    //                         data={data.casual}
+    //                         barWidth={10}
+    //                         cornerRadius={{ top: 5, bottom: 5 }}
+    //                         style={{
+    //                             data: {
+    //                                 fill: 'rgba(218, 4, 4, 1)',
+    //                                 stroke: '#000',
+    //                                 strokeWidth: 1
+    //                             }
+    //                         }}
+    //                     />
+    //                     <VictoryBar
+    //                         data={data.sick}
+    //                         barWidth={10}
+    //                         cornerRadius={{ top: 5, bottom: 5 }}
+    //                         style={{
+    //                             data: {
+    //                                 fill: 'rgba(214, 4, 218, 1)',
+    //                                 stroke: '#000',
+    //                                 strokeWidth: 1
+    //                             }
+    //                         }}
+    //                     />
+    //                     <VictoryBar
+    //                         data={data.comfort}
+    //                         barWidth={10}
+    //                         cornerRadius={{ top: 5, bottom: 5 }}
+    //                         style={{
+    //                             data: {
+    //                                 fill: 'rgba(255, 168, 0, 1)',
+    //                                 stroke: '#000',
+    //                                 strokeWidth: 1
+    //                             }
+    //                         }}
+    //                     />
+    //                     <VictoryBar
+    //                         data={data.special}
+    //                         barWidth={10}
+    //                         cornerRadius={{ top: 5, bottom: 5 }}
+    //                         style={{
+    //                             data: {
+    //                                 fill: 'rgba(9, 4, 255, 1)',
+    //                                 stroke: '#000',
+    //                                 strokeWidth: 1
+    //                             }
+    //                         }}
+    //                     />
+    //                 </VictoryGroup>
+    //                 <VictoryAxis
+    //                     dependentAxis
+    //                     style={{
+    //                         axis: { stroke: 'none' },
+    //                         grid: { stroke: 'grey', strokeDasharray: '4,4' },
+    //                         ticks: { padding: 10 },
+    //                         tickLabels: { fontSize: 10, padding: 5 }
+    //                     }}
+    //                 />
+    //                 <VictoryAxis
+    //                     style={{
+    //                         grid: { stroke: 'none' },
+    //                         tickLabels: { fontSize: 10 }
+    //                     }}
+    //                 />
+    //                 {/* <VictoryLegend
+    //                     style={{marginLeft: "10%"}}
+    //                     orientation="horizontal"
+    //                     gutter={30}
+    //                     data={[
+    //                         { name: 'Casual', symbol: { fill: 'rgba(218, 4, 4, 1)' } },
+    //                         { name: 'Sick', symbol: { fill: 'rgba(214, 4, 218, 1)' } },
+    //                         { name: 'Comfort', symbol: { fill: 'rgba(255, 168, 0, 1)' } },
+    //                         { name: 'Special', symbol: { fill: 'rgba(9, 4, 255, 1)' } },
+    //                     ]}
+    //                 /> */}
+    //             </VictoryChart>
+    //         </View>
+    //     );
+    // };
 
     const holidaysData = [
         { date: 'July 4', name: 'Independence Day' },
@@ -161,7 +161,7 @@ export default function LeavesDashboard() {
             <ScrollView>
                 <View>
                     <View style={styles.cardHeader}>
-                        <Text style={{fontSize: 16, fontWeight: 500}}>Overview</Text>
+                        <Text>Overview</Text>
                     </View>
                     <View>
                         <View style={styles.circularProgressContainer}>
@@ -277,11 +277,11 @@ export default function LeavesDashboard() {
                     </View>
                     <View style={styles.divider} />
                     <View style={styles.performanceContainer}>
-                        <Text style={{fontSize: 16, fontWeight: 500}}>My Performance</Text>
-                        <Text style={{fontSize: 16, fontWeight: 400}}>July 2024</Text>
+                        <Text>My Performance</Text>
+                        <Text>July 2024</Text>
                     </View>
-                    <View style = {styles.legendContainer}>
-                        <VictoryLegend
+                    <View style={styles.legendContainer}>
+                        {/* <VictoryLegend
                             orientation="horizontal"
                             gutter={30}
                             data={[
@@ -290,7 +290,7 @@ export default function LeavesDashboard() {
                                 { name: 'Comfort', symbol: { fill: 'rgba(255, 168, 0, 1)' } },
                                 { name: 'Special', symbol: { fill: 'rgba(9, 4, 255, 1)' } },
                             ]}
-                        />
+                        /> */}
                     </View>
 
                     <View style={styles.calendarContainer}>
@@ -321,10 +321,10 @@ export default function LeavesDashboard() {
                 <View style={styles.divider} />
                 <View>
                     <View style={styles.threeMonthsPerformanceContainer}>
-                        <Text style={{fontSize: 16, fontWeight: 500}}>3 Months Performance</Text>
+                        <Text>3 Months Performance</Text>
                     </View>
-                    <View style = {styles.legendContainer}>
-                        <VictoryLegend
+                    <View style={styles.legendContainer}>
+                        {/* <VictoryLegend
                             orientation="horizontal"
                             gutter={30}
                             data={[
@@ -333,10 +333,10 @@ export default function LeavesDashboard() {
                                 { name: 'Comfort', symbol: { fill: 'rgba(255, 168, 0, 1)' } },
                                 { name: 'Special', symbol: { fill: 'rgba(9, 4, 255, 1)' } },
                             ]}
-                        />
+                        /> */}
                     </View>
                     <View>
-                    <LeavesChart />
+                        {/* <LeavesChart /> */}
                     </View>
                 </View>
 
@@ -344,7 +344,7 @@ export default function LeavesDashboard() {
 
             <View style={styles.footerContainer}>
                 <TouchableOpacity style={styles.iconButton}>
-                    <Ionicons name="home" size={30} color="grey" onPress={() => navigation.navigate("leavesDashboard")}/>
+                    <Ionicons name="home" size={30} color="grey" onPress={() => navigation.navigate("leavesDashboard")} />
                     <Text>Home</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.iconButton} onPress={() => navigation.navigate("leaves")}>
@@ -407,7 +407,7 @@ const styles = StyleSheet.create({
         height: "auto",
         justifyContent: "space-between",
         paddingTop: "2%",
-        marginLeft: "2%",
+        marginLeft: "1%",
     },
     circularProgressCard: {
         alignItems: "center",
@@ -423,22 +423,23 @@ const styles = StyleSheet.create({
     },
     applyButtonContainer: {
         paddingTop: "5%",
-        paddingRight: "-2%",
+        paddingRight: "5%",
     },
     applyButton: {
-        alignItems: "center",
-        width: "20%",
         backgroundColor: "rgba(99, 102, 255, 1)",
-        paddingVertical: 5,
-        paddingHorizontal: 30,
+        paddingVertical: 4,
+        paddingHorizontal: 20,
         borderRadius: 15,
+        margin: "2%",
+        justifyContent: "center",
     },
     applyButtonText: {
         fontSize: 14,
-        fontFamily: "Roboto",
+        // fontFamily: "Roboto",
         fontWeight: "400",
         color: "#fff",
         textAlign: "center",
+        marginTop: -1,
     },
     divider: {
         height: 8,
@@ -455,8 +456,8 @@ const styles = StyleSheet.create({
         borderRadius: 10,
     },
     sectionTitle: {
-        fontSize: 16,
-        fontWeight: '500',
+        fontSize: 18,
+        fontWeight: 'bold',
         marginBottom: 5,
     },
     holidaysStrip: {
@@ -495,14 +496,14 @@ const styles = StyleSheet.create({
     },
     calendarContainer: {
         marginHorizontal: "3%",
-        marginTop: "-50%",
+        // marginTop: "-50%",
         backgroundColor: "#FAFAFF"
     },
     calendar: {
         backgroundColor: '#FAFAFF',
         borderWidth: 0,
     },
-    barGraph:{
+    barGraph: {
         marginTop: "-65%",
     },
     threeMonthsPerformanceContainer: {
