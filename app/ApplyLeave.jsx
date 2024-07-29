@@ -10,6 +10,7 @@ const formDataConstraints = {
         presence: {
             allowEmpty: false,
             message: " is required",
+            
         },
         length: {
             minimum: 5,
@@ -382,7 +383,7 @@ const styles = StyleSheet.create({
     dropdownContainer1: {
         paddingVertical: 16,
         paddingHorizontal: 20,
-        marginRight: "10%",
+        marginRight: "20%",
         margin: -10,
     },
     ccdropdownContainer: {
@@ -408,7 +409,6 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderRadius: 35,
         paddingHorizontal: 10,
-        // Optionally, you may want to adjust padding and margins
     },
     ccdropdown: {
         height: 30,
@@ -417,7 +417,6 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderRadius: 35,
         paddingHorizontal: 10,
-        // Optionally, you may want to adjust padding and margins
     },
     ccContainer: {
         marginBottom: 15,
@@ -613,10 +612,11 @@ const styles = StyleSheet.create({
         marginTop: -5,
     },
     item: {
-        padding: 17,
+        padding: 1,
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
+        width:'100%'
     },
     textItem: {
         flex: 1,
