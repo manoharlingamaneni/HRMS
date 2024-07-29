@@ -1,0 +1,17 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts"
+, "app/ApplyLeave.jsx", "app/(tabs)/demo.jsx", "app/(tabs)/ex.jsx", "app/leavesDashboard.jsx", "app/PendingLeaves.jsx", "app/(tabs)/leaves.jsx", "app/leaveCalender.jsx", "app/HolidayCalender.jsx", "app/HistoryLeaves.jsx", "app/(tabs)/ex.jsx"  ]
+}
